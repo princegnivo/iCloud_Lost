@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import WhiteAppleIcon from "../assets/white_apple_icon.png";
+import AppleIcloudLogo from "../assets/apple-icloud-logo.svg";
 import WhiteThreeDotsIcon from "../assets/white_three_dots_icon.svg";
 import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [state, setState] = useState(false);
   const contentRef = useRef(null);
   const navigate = useNavigate();
+
   const handleUserGuide = () => {
     setState((prevState) => !prevState);
   };
@@ -24,20 +26,19 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar flex fixed absolute// h-16 justify-between px-4 py-2 bg-transparent backdrop-blur-md w-full text-white ">
+    <nav className="navbar flex fixed h-16 justify-between px-4 py-2 bg-transparent backdrop-blur-md w-full text-white z-50">
       <button
         className="flex items-center"
-        onClick={() => {
-          window.location.reload();
-        }}
+        onClick={() => window.location.reload()}
       >
         <img
-          src={WhiteAppleIcon}
-          alt="black apple icon"
-          className="black-apple-icon w-5"
+          src={AppleIcloudLogo}
+          alt="Apple iCloud logo"
+          className="w-5"
         />
         <h2 className="text-xl font-medium pt-1 ml-0.5">iCloud</h2>
       </button>
+
       <div className="relative">
         <button
           className="text-2xl cursor-pointer rounded-lg"
@@ -51,10 +52,11 @@ const Navbar = () => {
             }`}
           />
         </button>
+
         {state && (
           <div
             ref={contentRef}
-            className="absolute shadow-black right-0 top-1 w-48 bg-black/20// text-base text-blue-400 hover:text-blue-600 py-2 px-4 flex justify-center items-center rounded-xl"
+            className="absolute shadow-black right-0 top-1 w-48 bg-black/20 text-base text-blue-400 hover:text-blue-600 py-2 px-4 flex justify-center items-center rounded-xl"
           >
             <a
               href="https://support.apple.com/en-vn/guide/icloud/welcome/icloud"
