@@ -34,9 +34,8 @@ const Navbar = () => {
         <img
           src={AppleIcloudLogo}
           alt="Apple iCloud logo"
-          className="h-5 w-auto mr-2"
+          className="h-[32px] w-auto"
         />
-        <h2 className="text-xl font-medium pt-[2px]">iCloud</h2>
       </button>
 
       <div className="relative">
