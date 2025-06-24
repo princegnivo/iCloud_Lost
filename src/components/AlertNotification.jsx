@@ -13,7 +13,7 @@ const AlertNotification = () => {
     <div className="fixed inset-0 flex w-full items-center rounded-xl justify-center bg-black bg-opacity-90 px-6 md:px-44">
       <div className="bg-customBG-darkest w-full lg:w-1/2 p-10 text-white rounded-xl shadow-2xl text-center">
         <p className="text-xl sm:text-2xl">
-          ⚠️ Alert ⚠️
+          ❗ Alert ❗
 Your iPhone has gone online.
 Log in to follow the location map 🗺️
         </p>
