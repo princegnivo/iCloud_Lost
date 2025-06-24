@@ -26,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar flex fixed h-16 justify-between px-4 py-2 bg-transparent backdrop-blur-md w-full text-white z-50">
+    <nav className="navbar flex fixed h-16 justify-between px-4 py-2 bg-transparent backdrop-blur-md w-full text-black z-50">
       <button
         className="flex items-center"
         onClick={() => window.location.reload()}
@@ -34,9 +34,9 @@ const Navbar = () => {
         <img
           src={AppleIcloudLogo}
           alt="Apple iCloud logo"
-          className="w-5"
+          className="h-5 w-auto mr-2"
         />
-        <h2 className="text-xl font-medium pt-1 ml-0.5">iCloud</h2>
+        <h2 className="text-xl font-medium pt-[2px]">iCloud</h2>
       </button>
 
       <div className="relative">
@@ -47,7 +47,7 @@ const Navbar = () => {
           <img
             src={WhiteThreeDotsIcon}
             alt="three dots icon"
-            className={`w-10 p-2 hover:bg-gray-200/20 rounded-md ${
+            className={`w-10 p-2 hover:bg-gray-300/20 rounded-md ${
               state ? "hidden" : ""
             }`}
           />
@@ -56,7 +56,7 @@ const Navbar = () => {
         {state && (
           <div
             ref={contentRef}
-            className="absolute shadow-black right-0 top-1 w-48 bg-black/20 text-base text-blue-400 hover:text-blue-600 py-2 px-4 flex justify-center items-center rounded-xl"
+            className="absolute shadow-black right-0 top-1 w-48 bg-black/10 text-base text-blue-500 hover:text-blue-700 py-2 px-4 flex justify-center items-center rounded-xl"
           >
             <a
               href="https://support.apple.com/en-vn/guide/icloud/welcome/icloud"
