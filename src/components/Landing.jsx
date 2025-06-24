@@ -16,15 +16,17 @@ const Landing = () => {
     <div className="landing flex flex-col items-center text-center text-black bg-customBG-light h-fit pt-20">
       {!signInRequest ? (
         <div className="container flex flex-col items-center justify-center gap-4 w-full mb-20">
-          <div className="icloud-animate flex flex-col items-center justify-center p-2 gap-2">
-            <video
-              src={heroVideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-52 lg:w-[18rem] xl:w-[25rem] rounded-xl p-11 box-content"
-            ></video>
+          <div className="icloud-animate flex flex-col items-center justify-center p-2 gap-6 w-full">
+            <div className="w-full flex justify-center">
+              <video
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full max-w-[1200px] xl:max-w-[1400px] rounded-xl px-4 sm:px-11 box-content object-cover"
+              />
+            </div>
             <h1 className="icloud-heading text-7xl sm:text-[100px] xl:text-[8rem] tracking-tight font-bold">
               iCloud
             </h1>
