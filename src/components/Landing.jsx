@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import cloud_logo from "../assets/cloud_logo.svg";
+import cloud_logo from "../assets/hero.mp4";
 import icloud2tb from "../assets/2tb.png";
 import appList from "../assets/icons.png";
 import LoginForm from "./LoginForm";
