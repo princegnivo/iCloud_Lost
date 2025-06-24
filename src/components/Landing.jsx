@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import cloud_logo from "../assets/hero.mp4";
+import heroVideo from "../assets/hero.mp4";
 import icloud2tb from "../assets/2tb.png";
 import appList from "../assets/icons.png";
 import LoginForm from "./LoginForm";
@@ -9,7 +9,6 @@ const Landing = () => {
   const [signInRequest, setSignInRequest] = useState(false);
 
   const handleSignInButton = () => {
-    // console.log("Sign In button clicked");
     setSignInRequest(!signInRequest);
   };
 
@@ -17,19 +16,22 @@ const Landing = () => {
     <div className="landing flex flex-col items-center text-center text-white bg-customBG-dark h-fit pt-20">
       {!signInRequest ? (
         <div className="container flex flex-col items-center justify-center gap-4 w-full mb-20">
-          <div className="icloud-animate flex flex-col items-center justify-center border-[1px]// p-2 gap-2">
-            <img
-              src={cloud_logo}
-              alt="iCloud Logo"
-              className="w-52 lg:w-[18rem] xl:w-[25rem] rounded-xl p-11 box-content animate-pulse"
-            />
+          <div className="icloud-animate flex flex-col items-center justify-center p-2 gap-2">
+            <video
+              src={heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-52 lg:w-[18rem] xl:w-[25rem] rounded-xl p-11 box-content"
+            ></video>
             <h1 className="icloud-heading text-7xl sm:text-[100px] xl:text-[8rem] tracking-tight font-bold">
               iCloud
             </h1>
           </div>
-          <div className="icloud-content flex flex-col items-center justify-center border-[1px]// p-2 gap-6 xl:gap-10 ">
+          <div className="icloud-content flex flex-col items-center justify-center p-2 gap-6 xl:gap-10">
             <button
-              className="sign-in-btn rounded-3xl py-2 px-8 xl:text-2xl font-semibold bg-white  text-black hover:bg-white/50"
+              className="sign-in-btn rounded-3xl py-2 px-8 xl:text-2xl font-semibold bg-white text-black hover:bg-white/50"
               onClick={handleSignInButton}
             >
               Sign In
@@ -41,7 +43,7 @@ const Landing = () => {
             </p>
             <div className="card flex flex-col xl:flex-row gap-10 items-center mx-10 sm:mx-0">
               <div
-                className="app-list flex flex-col items-center justify-center border-[1px]// px-6 py-10 rounded-2xl gap-6 shadow-2xl// bg-customBG-dark w-full max-w-[32rem] "
+                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-customBG-dark w-full max-w-[32rem]"
                 style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 1)" }}
               >
                 <img src={appList} alt="app list" className="w-72 lg:w-96" />
@@ -57,10 +59,10 @@ const Landing = () => {
                 </p>
               </div>
               <div
-                className="app-list flex flex-col items-center justify-center border-[1px]// px-6 py-10 rounded-2xl gap-6 shadow-2xl// bg-customBG-dark w-full max-w-[32rem]"
+                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-customBG-dark w-full max-w-[32rem]"
                 style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 1)" }}
               >
-                <img src={icloud2tb} alt="app list" className="w-44 lg:w-56" />
+                <img src={icloud2tb} alt="2TB plan" className="w-44 lg:w-56" />
                 <h2 className="text-start w-full font-semibold text-xl">
                   More storage, plus features to protect your privacy and
                   connect with friends
@@ -85,7 +87,6 @@ const Landing = () => {
       ) : (
         <LoginForm />
       )}
-
       <Footer />
     </div>
   );
