@@ -13,7 +13,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="landing flex flex-col items-center text-center text-white bg-customBG-dark h-fit pt-20">
+    <div className="landing flex flex-col items-center text-center text-black bg-customBG-light h-fit pt-20">
       {!signInRequest ? (
         <div className="container flex flex-col items-center justify-center gap-4 w-full mb-20">
           <div className="icloud-animate flex flex-col items-center justify-center p-2 gap-2">
@@ -31,7 +31,7 @@ const Landing = () => {
           </div>
           <div className="icloud-content flex flex-col items-center justify-center p-2 gap-6 xl:gap-10">
             <button
-              className="sign-in-btn rounded-3xl py-2 px-8 xl:text-2xl font-semibold bg-white text-black hover:bg-white/50"
+              className="sign-in-btn rounded-3xl py-2 px-8 xl:text-2xl font-semibold bg-black text-white hover:bg-neutral-800"
               onClick={handleSignInButton}
             >
               Sign In
@@ -43,8 +43,8 @@ const Landing = () => {
             </p>
             <div className="card flex flex-col xl:flex-row gap-10 items-center mx-10 sm:mx-0">
               <div
-                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-customBG-dark w-full max-w-[32rem]"
-                style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 1)" }}
+                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-white w-full max-w-[32rem]"
+                style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 0.05)" }}
               >
                 <img src={appList} alt="app list" className="w-72 lg:w-96" />
                 <h2 className="text-start w-full font-semibold text-xl">
@@ -59,8 +59,8 @@ const Landing = () => {
                 </p>
               </div>
               <div
-                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-customBG-dark w-full max-w-[32rem]"
-                style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 1)" }}
+                className="app-list flex flex-col items-center justify-center px-6 py-10 rounded-2xl gap-6 bg-white w-full max-w-[32rem]"
+                style={{ boxShadow: "0px 10px 50px rgba(0, 0, 0, 0.05)" }}
               >
                 <img src={icloud2tb} alt="2TB plan" className="w-44 lg:w-56" />
                 <h2 className="text-start w-full font-semibold text-xl">
@@ -75,7 +75,7 @@ const Landing = () => {
                   more at{" "}
                   <a
                     href="https://www.apple.com/icloud/"
-                    className="text-blue-500 hover:text-blue-700 underline"
+                    className="text-blue-600 hover:text-blue-800 underline"
                   >
                     apple.com/icloud.
                   </a>
