@@ -40,20 +40,19 @@ const ScreenSizePanel = ({ position }) => {
       });
     };
 
-    handleResize(); // initialize on mount
+    handleResize(); // init on mount
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 📴 Disabled rendering – easily reversible
+  // ❌ Disabled display — toggle to true to enable
   const isEnabled = false;
   if (!isEnabled) return null;
 
   return (
     <div
       style={getPositionStyle()}
-      className="fixed p-4 bg-gray-800 text-white z-50"
+      className="fixed p-4 bg-white text-black border border-gray-300 rounded shadow-lg z-50"
     >
       <h2 className="text-lg font-bold">Current Screen Size</h2>
       <p className="text-xl">{screenSize}</p>
