@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 const ScreenSizePanel = ({ position }) => {
-  const [screenSize, setScreenSize] = useState(getCurrentBreakpoint());
+  const [screenSize, setScreenSize] = useState(null);
   const [windowDimensions, setWindowDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 0,
+    height: 0,
   });
 
   function getCurrentBreakpoint() {
     const width = window.innerWidth;
-    if (width < 640) return "XS"; // Extra small
-    if (width < 768) return "SM"; // Small
-    if (width < 1024) return "MD"; // Medium
-    if (width < 1280) return "LG"; // Large
-    return "xl"; // Extra large
+    if (width < 640) return "XS";
+    if (width < 768) return "SM";
+    if (width < 1024) return "MD";
+    if (width < 1280) return "LG";
+    return "XL";
   }
 
   function getPositionStyle() {
@@ -40,12 +40,15 @@ const ScreenSizePanel = ({ position }) => {
       });
     };
 
+    handleResize(); // initialize on mount
     window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // 📴 Disabled rendering – easily reversible
+  const isEnabled = false;
+  if (!isEnabled) return null;
 
   return (
     <div
