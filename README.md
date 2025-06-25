@@ -1,4 +1,3 @@
-# iCloud_Lost
 # iCloud Clone
 
 This project is a clone of the iCloud website (icloud.com) created for educational purposes, specifically to demonstrate phishing attacks which is one of my midterm essay requirement (Course: 503073 - Web Programming & Applications)
