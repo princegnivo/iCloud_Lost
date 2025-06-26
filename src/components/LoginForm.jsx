@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 import ProgressCircle from "./ProgressCircle";
 import LoadingCircle from "../assets/loading.svg";
-import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [isDropdown, setIsDropdown] = useState(false);
@@ -157,12 +156,12 @@ const LoginForm = () => {
           <div className="flex flex-col text-xs mt-4 text-blue-600">
             <button>Resend code to devices</button>
             <button className="tracking-wide mt-1">
-              Can’t get to your devices
+              Can't get to your devices
             </button>
           </div>
           <hr className="mt-4 w-full border-gray-200" />
           <p className="text-xs mt-4 tracking-wide text-gray-600">
-            If you can’t enter a code because you’ve lost your device, you can use Find Devices to locate it or Manage Devices to remove your Apple Pay cards from it.
+            If you can't enter a code because you've lost your device, you can use Find Devices to locate it or Manage Devices to remove your Apple Pay cards from it.
           </p>
         </div>
       )}
